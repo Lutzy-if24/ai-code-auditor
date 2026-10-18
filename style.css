@@ -1,0 +1,34 @@
+:root{--bg:#eef1f5;--ink:#1b2430;--mute:#5b6676;--panel:#fff;--line:#d5dbe4;
+--high:#c62f3e;--med:#c07a00;--low:#2f6db5;--ok:#2e8b57}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,sans-serif}
+header{padding:2.5rem 1.5rem 1rem;max-width:1100px;margin:auto}
+h1{margin:0;font-size:2.2rem;letter-spacing:-.02em}
+header p{margin:.3rem 0 0;color:var(--mute)}
+main{max-width:1100px;margin:auto;padding:1rem 1.5rem 3rem;display:grid;gap:1.5rem;grid-template-columns:1fr 1fr;align-items:start}
+section{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.25rem}
+label{font-weight:600}
+textarea{width:100%;height:340px;margin-top:.5rem;padding:.8rem;border:1px solid var(--line);border-radius:6px;font:14px/1.5 Consolas,"Courier New",monospace;resize:vertical}
+.actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}
+button{padding:.55rem 1rem;border:1px solid var(--line);background:#fff;border-radius:6px;font:inherit;cursor:pointer}
+button.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+button:focus-visible,textarea:focus-visible{outline:3px solid var(--low);outline-offset:2px}
+#msg{color:var(--mute);min-height:1.5em;margin:.6rem 0 0}
+.summary{display:flex;gap:1rem;align-items:center}
+.score{font-size:3.2rem;font-weight:700;line-height:1;min-width:5rem;text-align:center}
+.score.good{color:var(--ok)}.score.warn{color:var(--med)}.score.bad{color:var(--high)}
+h2{font-size:1.05rem;margin:1.4rem 0 .6rem}
+ul{list-style:none;padding:0;margin:0;display:grid;gap:.6rem}
+.f{border:1px solid var(--line);border-left:5px solid var(--line);border-radius:6px;padding:.6rem .8rem}
+.f.high{border-left-color:var(--high)}.f.medium{border-left-color:var(--med)}.f.low{border-left-color:var(--low)}
+.f p{margin:.25rem 0 0;font-size:.92rem}.fix{color:var(--mute)}
+.tag{float:right;font-size:.8rem;color:var(--mute)}
+.empty{color:var(--ok)}
+.codeview{border:1px solid var(--line);border-radius:6px;overflow-x:auto;margin-bottom:1rem;font:13px/1.6 Consolas,monospace}
+.row{display:flex;border-left:5px solid transparent;white-space:pre}
+.row.high{border-left-color:var(--high);background:#fbe9eb}
+.row.medium{border-left-color:var(--med);background:#fdf3de}
+.row.low{border-left-color:var(--low);background:#e8f0fa}
+.no{width:2.8rem;text-align:right;padding-right:.8rem;color:var(--mute);user-select:none;flex:none}
+@media(max-width:800px){main{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}

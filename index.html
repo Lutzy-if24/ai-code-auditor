@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Code Auditor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>AI Code Auditor</h1>
+  <p>Tempel kode JavaScript hasil AI. Temukan risikonya sebelum kode dipakai.</p>
+</header>
+<main>
+  <section class="input">
+    <label for="code">Kode yang akan diperiksa</label>
+    <textarea id="code" spellcheck="false" placeholder="Tempel kode JavaScript di sini..."></textarea>
+    <div class="actions">
+      <button id="analyze" class="primary">Periksa kode</button>
+      <button id="sample">Muat contoh kode AI</button>
+      <button id="clear">Kosongkan</button>
+    </div>
+    <p id="msg" role="status"></p>
+  </section>
+  <section class="output" id="output" hidden>
+    <div class="summary">
+      <div class="score" id="score"></div>
+      <div id="verdict"></div>
+    </div>
+    <h2>Temuan</h2>
+    <ul id="findings"></ul>
+    <h2>Kode dengan penanda</h2>
+    <div id="codeview" class="codeview"></div>
+    <button id="export">Unduh laporan (.txt)</button>
+  </section>
+</main>
+<script src="rules.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
